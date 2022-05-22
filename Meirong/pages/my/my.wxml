@@ -1,0 +1,44 @@
+<!--pages/my/my.wxml-->
+<view class="top">
+  <view class="userInfo">
+     <!--显示名字-->
+    <view class="nickName">{{userInfo.nickName}}</view>
+      <view class="fontColor" style="font-size:26rpx;margin-top:10rpx"> 
+        <view wx:if="{{isData}}">
+           未登录  
+           <text class="register" bindtap="toRegister">注册账号</text>
+           <text class="login" bindtap="toLogin">直接登录      </text>
+        </view>  
+        <view wx:else>
+         已登录
+        </view> 
+      </view> 
+  </view>
+    <!--显示地址-->
+  <image src="{{userInfo.avatarUrl}}"></image>
+</view>
+
+
+<!-- 第二部分 订单状态 nav -->
+<view class="nav"> 
+  <view class="{{currentIndex==index?'navTab':''}}" bindtap="getOrderData" data-inx="{{index}}" wx:for="{{navTabData}}" wx:key="index"> {{item}} </view> 
+</view>
+
+
+
+<!-- 第三部分 展示订单 -->
+<view class="order">
+  <view class="orderItem" wx:for="{{orderData}}">
+  <image src="{{imageHttpUrl+item.project.image.imageurl}}"></image>
+
+  <view class="orderInfo">
+
+
+  <view class="proname">{{item.proname}}</view>
+  <view>{{item.business.busname}}</view>
+  <view>价格：{{item.project.proprice}}元</view>
+  <view>{{item.business.servertime}}</view>
+  </view>
+
+  </view>
+</view>

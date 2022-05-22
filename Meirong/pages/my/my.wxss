@@ -1,0 +1,61 @@
+/* pages/my/my.wxss */
+/* pages/my/my.wxss */
+.top image{
+  width: 160rpx;
+  height: 160rpx;
+  border-radius: 50%;
+}
+
+.top{
+  border-top: 1px solid #999;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20rpx;
+  padding-top: 40rpx;
+  align-items: center;
+}
+.nickName{
+  font-weight: bold;
+  font-size: 40rpx;
+}
+
+
+.fontColor{
+  color: #999;
+}
+
+
+.register,.login{
+  color: blue;
+  margin-left: 20rpx;
+}
+
+.nav{ display: flex; 
+justify-content: space-between; 
+padding: 0 20rpx; 
+margin-top: 40rpx; }
+
+.navTab{
+border-bottom: 1px solid #999; padding-bottom: 10rpx;
+}
+
+
+/* 订单展示 */
+
+.order{
+padding: 0 20rpx; margin-top: 40rpx;
+}
+
+.orderItem{ display: flex;
+align-items: center; margin-top: 20rpx;
+}
+.orderItem image{ height: 160rpx; width: 50%;
+}
+
+.proname{ width:300rpx;
+white-space: nowrap; overflow: hidden;
+text-overflow: ellipsis;
+}
+.orderInfo{
+margin-left: 20rpx;
+}
